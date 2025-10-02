@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA2A65202E8E945500E88E40 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EA2A651F2E8E945500E88E40 /* Alamofire */; };
 		EAE2C5912E8C3E5F003FAD21 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EAE2C5902E8C3E5F003FAD21 /* Swinject */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA2A65302E8ED61D00E88E40 /* Secrets.plist.example */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Secrets.plist.example; sourceTree = "<group>"; };
 		EAE2C3FC2E8BF56C003FAD21 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE2C4122E8BF56E003FAD21 /* MovieAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE2C41C2E8BF56E003FAD21 /* MovieAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE2C5912E8C3E5F003FAD21 /* Swinject in Frameworks */,
+				EA2A65202E8E945500E88E40 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +96,7 @@
 		EAE2C3F32E8BF56C003FAD21 = {
 			isa = PBXGroup;
 			children = (
+				EA2A65302E8ED61D00E88E40 /* Secrets.plist.example */,
 				EAE2C3FE2E8BF56C003FAD21 /* MovieApp */,
 				EAE2C4152E8BF56E003FAD21 /* MovieAppTests */,
 				EAE2C41F2E8BF56E003FAD21 /* MovieAppUITests */,
@@ -131,6 +135,7 @@
 			name = MovieApp;
 			packageProductDependencies = (
 				EAE2C5902E8C3E5F003FAD21 /* Swinject */,
+				EA2A651F2E8E945500E88E40 /* Alamofire */,
 			);
 			productName = MovieApp;
 			productReference = EAE2C3FC2E8BF56C003FAD21 /* MovieApp.app */;
@@ -216,6 +221,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				EAE2C58F2E8C3E5F003FAD21 /* XCRemoteSwiftPackageReference "Swinject" */,
+				EA2A651E2E8E945500E88E40 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EAE2C3FD2E8BF56C003FAD21 /* Products */;
@@ -604,6 +610,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EA2A651E2E8E945500E88E40 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
 		EAE2C58F2E8C3E5F003FAD21 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -615,6 +629,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EA2A651F2E8E945500E88E40 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA2A651E2E8E945500E88E40 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		EAE2C5902E8C3E5F003FAD21 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EAE2C58F2E8C3E5F003FAD21 /* XCRemoteSwiftPackageReference "Swinject" */;
