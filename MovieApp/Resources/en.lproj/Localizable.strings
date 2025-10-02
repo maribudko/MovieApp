@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  MovieApp
+
+  Created by Mari Budko on 30.09.2025.
+  
+*/
+
+"error.network.offline" = "You are offline. Please, enable your Wi-Fi or connect using cellular data.";
+"error.network.http" = "Server error (%d). Please try again.";
+"error.data.decoding" = "Failed to load data. Please try again.";
+"error.unknown" = "Something went wrong. Please try again.";
+
