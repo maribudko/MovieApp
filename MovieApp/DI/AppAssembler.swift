@@ -14,7 +14,10 @@ public final class AppAssembler {
     public let resolver: DIResolver
     
     private init() {
-        assembler = Assembler()
+        assembler = Assembler([
+            NetworkAssembly(),
+            RepositoryAssembly()
+        ])
         resolver = SwinjectResolver(resolver: assembler.resolver)
     }
     
