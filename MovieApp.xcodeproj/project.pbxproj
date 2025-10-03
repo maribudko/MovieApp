@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EA2A65202E8E945500E88E40 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EA2A651F2E8E945500E88E40 /* Alamofire */; };
+		EA2A65FF2E8FB05D00E88E40 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EA2A65FE2E8FB05D00E88E40 /* SnapKit */; };
+		EA2A669E2E8FCDD200E88E40 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = EA2A669D2E8FCDD200E88E40 /* SDWebImage */; };
 		EAE2C5912E8C3E5F003FAD21 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EAE2C5902E8C3E5F003FAD21 /* Swinject */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +73,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2A65FF2E8FB05D00E88E40 /* SnapKit in Frameworks */,
 				EAE2C5912E8C3E5F003FAD21 /* Swinject in Frameworks */,
+				EA2A669E2E8FCDD200E88E40 /* SDWebImage in Frameworks */,
 				EA2A65202E8E945500E88E40 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +140,8 @@
 			packageProductDependencies = (
 				EAE2C5902E8C3E5F003FAD21 /* Swinject */,
 				EA2A651F2E8E945500E88E40 /* Alamofire */,
+				EA2A65FE2E8FB05D00E88E40 /* SnapKit */,
+				EA2A669D2E8FCDD200E88E40 /* SDWebImage */,
 			);
 			productName = MovieApp;
 			productReference = EAE2C3FC2E8BF56C003FAD21 /* MovieApp.app */;
@@ -222,6 +228,8 @@
 			packageReferences = (
 				EAE2C58F2E8C3E5F003FAD21 /* XCRemoteSwiftPackageReference "Swinject" */,
 				EA2A651E2E8E945500E88E40 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				EA2A65FD2E8FB05D00E88E40 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				EA2A669C2E8FCDD200E88E40 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EAE2C3FD2E8BF56C003FAD21 /* Products */;
@@ -618,6 +626,22 @@
 				minimumVersion = 5.10.2;
 			};
 		};
+		EA2A65FD2E8FB05D00E88E40 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		EA2A669C2E8FCDD200E88E40 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.2;
+			};
+		};
 		EAE2C58F2E8C3E5F003FAD21 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -633,6 +657,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EA2A651E2E8E945500E88E40 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		EA2A65FE2E8FB05D00E88E40 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA2A65FD2E8FB05D00E88E40 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		EA2A669D2E8FCDD200E88E40 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA2A669C2E8FCDD200E88E40 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 		EAE2C5902E8C3E5F003FAD21 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;

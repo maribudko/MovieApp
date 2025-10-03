@@ -14,6 +14,7 @@ struct Movie: Equatable, Hashable {
     let releaseDate: Date?
     let rating: Double?
     let posterPath: String?
+    let backdropPath: String?
 }
 
 struct MoviesPage {

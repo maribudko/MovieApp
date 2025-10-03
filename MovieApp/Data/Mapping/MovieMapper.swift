@@ -15,7 +15,8 @@ enum MovieMapper {
             overview: dto.overview,
             releaseDate: date(from: dto.release_date),
             rating: dto.vote_average,
-            posterPath: dto.poster_path
+            posterPath: dto.poster_path,
+            backdropPath: dto.backdrop_path
         )
     }
     

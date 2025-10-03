@@ -14,18 +14,42 @@ final class MoviesRepository: MoviesRepositoryProtocol {
         self.api = api
     }
     
-    func fetchMovies(page: Int, query: String?, sort: SortOption?, genres: [Int]?) async throws -> MoviesPage {
+    func fetchMovies(
+        page: Int,
+        query: String?,
+        sort: SortOption?,
+        genres: [Int]?,
+        completion: @escaping (Result<MoviesPage, MoviesErrors>) -> Void
+    ) {
         if let query = query?.trimmingCharacters(in: .whitespacesAndNewlines), query.isEmpty == false {
-            let dto: PagedResponse<MovieDTO> = try await api.get(.search(query: query, page: page))
-            return MovieMapper.mapPage(dto)
+            api.get(.search(query: query, page: page)) { (result: Result<PagedResponse<MovieDTO>, MoviesErrors>) in
+                switch result {
+                case .success(let dto):
+                    completion(.success(MovieMapper.mapPage(dto)))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        } else {
+            api.get(.discover(page: page, sort: sort, genres: genres)) { (result: Result<PagedResponse<MovieDTO>, MoviesErrors>) in
+                switch result {
+                case .success(let dto):
+                    completion(.success(MovieMapper.mapPage(dto)))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
         }
-        
-        let dto: PagedResponse<MovieDTO> = try await api.get(.discover(page: page, sort: sort, genres: genres))
-        return MovieMapper.mapPage(dto)
     }
     
-    func fetchDetails(id: Int) async throws -> Movie {
-        let dto: MovieDTO = try await api.get(.details(id: id))
-        return MovieMapper.map(dto)
+    func fetchDetails(id: Int, completion: @escaping (Result<Movie, MoviesErrors>) -> Void) {
+        api.get(.details(id: id)) { (result: Result<MovieDTO, MoviesErrors>) in
+            switch result {
+            case .success(let dto):
+                completion(.success(MovieMapper.map(dto)))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 }

@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let root = MovieListViewController()
+        let root = AppAssembler.shared.resolver.resolve(MovieListViewController.self)
         let navigationController = UINavigationController(rootViewController: root)
         
         window.rootViewController = navigationController

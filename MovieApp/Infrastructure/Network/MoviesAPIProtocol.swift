@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MoviesAPIProtocol {
-    func get<T: Codable>(_ endpoint: MovieEndpoint) async throws -> T
+    func get<T: Codable>(_ endpoint: MovieEndpoint, completion: @escaping (Result<T, MoviesErrors>) -> Void)
 }
 
 enum MovieEndpoint {
