@@ -8,8 +8,8 @@
 import Foundation
 
 protocol MoviesRepositoryProtocol {
-    func fetchMovies(page: Int, query: String?, sort: SortOption?, genres: [Int]?) async throws -> MoviesPage
-    func fetchDetails(id: Int) async throws -> Movie
+    func fetchMovies(page: Int, query: String?, sort: SortOption?, genres: [Int]?, completion: @escaping (Result<MoviesPage, MoviesErrors>) -> Void)
+    func fetchDetails(id: Int, completion: @escaping (Result<Movie, MoviesErrors>) -> Void)
 }
 
 enum SortOption: String, Codable {

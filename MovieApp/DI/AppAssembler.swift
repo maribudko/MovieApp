@@ -16,7 +16,9 @@ public final class AppAssembler {
     private init() {
         assembler = Assembler([
             NetworkAssembly(),
-            RepositoryAssembly()
+            RepositoryAssembly(),
+            ReachabilityAssembly(),
+            MoviesListAssembly()
         ])
         resolver = SwinjectResolver(resolver: assembler.resolver)
     }
