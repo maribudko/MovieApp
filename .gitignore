@@ -62,4 +62,5 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 # Secrets
-Secrets.plist
+MovieApp/Resources/Secrets.plist
+MovieApp/Resources/Secrets.plist
